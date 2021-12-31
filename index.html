@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Calculo TMB</title>
+</head>
+
+<body>
+
+    <article>
+        <section>
+            <h1 class="h1">Calculadora de Índice de Masa Corporal</h1>
+            <p>El índice de masa corporal (IMC) es la relación entre la masa corporal de una persona y su estatura. Según los valores propuestos por la Organización Mundial de la Salud (OMS), el IMC uno de los principales recursos para evaluar el estado nutricional. 
+
+            Recuerde que el IMC no evalúa su porcentaje de masa muscular, grasa y otros factores; por lo tanto, no es un método preciso. Debe usarse como una guía aproximativa.
+            </p>    
+        </section>
+
+        <section class="section__index">
+        
+            <h2>Calculadora de IMC</h2>
+            
+            <form id="formulario" method="post">
+                <span class="calculadorah3__index">Tu altura (en metros: <i>ej. 1.65)</i></span>
+                <input class="input" placeholder="altura" id="altura">
+
+                    
+                <div>
+                    <span class="calculadorah3__index">Tu peso (en kilogramos: <i>ej. 58.7)</i></span>
+                    <input class="input" placeholder="peso" id="peso">
+                </div>
+                
+                <div class="div-edad">
+                    <span>Edad: </span>
+                    <select name="select" id="edadSelect">
+                        <option value="value1" selected>14</option> 
+                    </select> años
+                </div>
+
+                <div class="div-sexo">
+                    <span>Sexo: </span> 
+                    <label><input type="radio" name="gender" id="masc" checked> Masculino</label>
+                    <label><input type="radio" name="gender" id="fem"> Femenino</label>
+                </div>
+
+                <div>
+                    <button  class="button" id="buttonCalculo" type="button">Calcular</button>
+                </div>
+
+                <p id="resultado"><span id="infoImc"></span></p>
+            </form>
+
+            <div id="resultadoCalorias">
+                <h2>Tasa Metabólica Basal</h2>
+                <div id="resultado2">
+                    <strong>Su tasa metabólica basal es de:</strong>
+                    <div id="infoTmb"></div>
+                    <p>Estas son las calorias que quema tu cuerpo solo por existir. Para saber cuántas calorias necesitas para mantenerte debes multiplicar este número por uno de los siguientes según su actividad física semanal: 
+                        
+                        <!-- acá voy a hacer otra calculadora -->
+                    </p>
+
+
+                    <div class="tablaIndex">
+                        <span class="tablaIndex__h3">Ejercicio semanal</span>
+                        <span class="tablaIndex__h3">Calorías diarias</span>
+        
+                        <span class="tablaIndex__comp">Poco o ningún ejercicio</span>
+                        <span class="tablaIndex__imc">TMB x 1,2</span> 
+        
+                        <span class="tablaIndex__comp">Ejercicio ligero (1-3 días a la semana)</span> 
+                        <span class="tablaIndex__imc">TMB x 1,375</span>
+                        
+                        <span class="tablaIndex__comp">Ejercicio moderado (3-5 días a la semana)</span>
+                        <span class="tablaIndex__imc">TMB x 1,55</span>	
+        
+                        <span class="tablaIndex__comp">Ejercicio fuerte (6-7 días a la semana)</span>
+                        <span class="tablaIndex__imc">TMB x 1,725</span>
+
+                        <span class="tablaIndex__comp">Ejercicio muy fuerte (dos veces al día, entrenamientos muy duros)</span>
+                        <span class="tablaIndex__imc">TMB x 1,9</span>
+            
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section>
+
+            <div class="tablaIndex">
+                <span class="tablaIndex__h3">Composición corporal</span>
+                <span class="tablaIndex__h3">Índice de masa corporal (IMC)</span>
+
+                <span class="tablaIndex__comp">Peso inferior al normal</span>
+                <span class="tablaIndex__imc">Menos de 18.5</span> 
+
+                <span class="tablaIndex__comp">Normal</span> 
+                <span class="tablaIndex__imc">18.5 – 24.9</span>
+                
+                <span class="tablaIndex__comp">Peso superior al normal</span>
+                <span class="tablaIndex__imc">25.0 – 29.9</span>	
+
+                <span class="tablaIndex__comp">Obesidad</span>
+                <span class="tablaIndex__imc">Más de 30.0</span>
+	
+            </div>
+        </section>
+
+    </article>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
